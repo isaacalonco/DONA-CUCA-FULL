@@ -1,15 +1,436 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DONA CUCA</title>
+
+    <!-- ===== SEO Primary ===== -->
+    <title>Dona Cuca | Pão de Queijo Artesanal em Brasília</title>
+    <meta name="description" content="Conheça o pão de queijo artesanal da Dona Cuca — feito com ingredientes de verdade, ovo e queijo autênticos. Tradição desde 1985 em Brasília-DF.">
+    <meta name="keywords" content="pão de queijo, biscoito de queijo, pão de queijo artesanal, Dona Cuca, Brasília, DF, pão de queijo recheado, queijo mineiro">
+    <meta name="author" content="Dona Cuca">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.donacuca.com.br/">
+
+    <!-- ===== Open Graph (WhatsApp, Facebook, LinkedIn) ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.donacuca.com.br/">
+    <meta property="og:title" content="Dona Cuca | Pão de Queijo Artesanal em Brasília">
+    <meta property="og:description" content="Feito com ingredientes de verdade desde 1985. Descubra o pão de queijo mais saboroso de Brasília.">
+    <meta property="og:image" content="https://www.donacuca.com.br/assets/img/11.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Dona Cuca">
+
+    <!-- ===== Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dona Cuca | Pão de Queijo Artesanal em Brasília">
+    <meta name="twitter:description" content="Feito com ingredientes de verdade desde 1985.">
+    <meta name="twitter:image" content="https://www.donacuca.com.br/assets/img/11.webp">
+
+    <!-- ===== Favicon ===== -->
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/x-icon">
+
+    <!-- ===== JSON-LD Structured Data (Google Business) ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FoodEstablishment",
+      "name": "Dona Cuca",
+      "description": "Pão de queijo artesanal feito com ingredientes autênticos, tradição desde 1985.",
+      "url": "https://www.donacuca.com.br",
+      "telephone": "+55-61-99512-2550",
+      "email": "atendimento@donacuca.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "SIA Trecho 3 Lotes 625 a 695 - Loja 01",
+        "addressLocality": "Brasília",
+        "addressRegion": "DF",
+        "addressCountry": "BR"
+      },
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "08:00", "closes": "12:00" }
+      ],
+      "sameAs": [
+        "https://www.instagram.com/donacucapaodequeijo",
+        "https://www.facebook.com/donacucapaodequeijo"
+      ]
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    <header>
-        <nav>
-            <ul></ul>
-        </nav>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/logo/logo.png" alt="Dona Cuca">
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#inicio" data-i18n="nav-home">INÍCIO</a></li>
+                    <li><a href="#historia" data-i18n="nav-about">A DONA CUCA</a></li>
+                    <li class="dropdown">
+                        <a href="#produtos"><span data-i18n="nav-products">PRODUTOS</span> <i
+                                class="fa-solid fa-chevron-down text-xs"></i></a>
+                    </li>
+                    <li><a href="#parceiro" data-i18n="nav-partner">SEJA UM PARCEIRO</a></li>
+                    <li><a href="#contato" data-i18n="nav-contact">FALE COM A GENTE</a></li>
+                    <li class="language-selector">
+                        <div class="lang-current">
+                            <img src="https://flagcdn.com/w20/br.png" alt="Português" id="current-flag">
+                            <span><span id="current-lang-text">PT</span> <i
+                                    class="fa-solid fa-chevron-down text-xs"></i></span>
+                        </div>
+                        <ul class="lang-dropdown">
+                            <li data-lang="pt" data-flag="br"><img src="https://flagcdn.com/w20/br.png" alt="Português">
+                                Português</li>
+                            <li data-lang="en" data-flag="us"><img src="https://flagcdn.com/w20/us.png" alt="English">
+                                English</li>
+                            <li data-lang="es" data-flag="es"><img src="https://flagcdn.com/w20/es.png" alt="Español">
+                                Español</li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="#pedir" class="btn btn-primary btn-header" data-i18n="btn-order">Peça agora</a>
+            </nav>
+        </div>
     </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg-slider">
+            <div class="hero-bg-slide" style="background-image: url('assets/img/webp/11.webp'); animation-delay: 0s;"></div>
+            <div class="hero-bg-slide" style="background-image: url('assets/img/webp/09.webp'); animation-delay: 6s;"></div>
+            <div class="hero-bg-slide" style="background-image: url('assets/img/webp/10.webp'); animation-delay: 12s;"></div>
+            <div class="hero-bg-slide" style="background-image: url('assets/img/webp/07.webp'); animation-delay: 18s;"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h2 class="hero-subtitle scroll-reveal" data-i18n="hero-subtitle">Saboreie nossas delícias</h2>
+            <h1 class="hero-title scroll-reveal delay-100" data-i18n="hero-title">Uma experiência<br>gastronômica
+                diferente</h1>
+
+            <div class="hero-video-thumbnail scroll-reveal delay-200">
+                <video id="heroVideo" class="video-thumb-img" autoplay>
+                    <source src="assets/video/video.mp4" type="video/mp4">
+                </video>
+                <div class="play-btn" id="heroPlayBtn" style="cursor: pointer;">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
+
+            <div class="hero-buttons scroll-reveal delay-300">
+                <a href="#pedir" class="btn btn-primary" data-i18n="btn-order">Peça agora</a>
+                <a href="https://www.youtube.com/@DonaCucaPaoDeQueijo" target="_blank" class="btn btn-danger"
+                    id="btnYoutubeHero"><span data-i18n="hero-youtube">Acesse nosso canal</span> <i
+                        class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="produtos" class="products">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h2 class="section-title" data-i18n="products-title">NOSSOS PRODUTOS</h2>
+            </div>
+
+            <div class="products-grid">
+                <!-- Card 1 -->
+                <div class="product-card scroll-reveal delay-100">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/webp/01.webp" alt="Pães de Queijo Artesanal Dona Cuca" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="prod1-title">PÃES DE QUEIJO</h3>
+                        <p data-i18n="prod1-desc">Para você saborear a qualquer hora com sua família, de forma rápida e
+                            prática as delícias que só a Dona Cuca tem.</p>
+                        <a href="#mais" class="btn btn-outline-danger" data-i18n="btn-more">Mais informações</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="product-card scroll-reveal delay-200">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/webp/06.webp" alt="Biscoitos de Queijo Dona Cuca" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="prod2-title">BISCOITOS DE QUEIJO</h3>
+                        <p data-i18n="prod2-desc">A união perfeita da tradição mineira com a praticidade que o seu dia a
+                            dia pede, em uma embalagem com o sabor de casa.</p>
+                        <a href="#mais" class="btn btn-outline-danger" data-i18n="btn-more">Mais informações</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="product-card scroll-reveal delay-300">
+                    <div class="card-img-wrapper">
+                        <img src="assets/img/webp/09.webp" alt="Sabores Especiais Dona Cuca" loading="lazy">
+                    </div>
+                    <div class="card-content">
+                        <h3 data-i18n="prod3-title">SABORES ESPECIAIS</h3>
+                        <p data-i18n="prod3-desc">Momentos inesquecíveis merecem sabores e receitas especiais. Produtos
+                            feitos com muito carinho.</p>
+                        <a href="#mais" class="btn btn-outline-danger" data-i18n="btn-more">Mais informações</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action (Contact) -->
+    <section id="contato" class="cta-section">
+        <div class="container cta-container">
+            <div class="cta-text scroll-reveal-left">
+                <p class="cta-subtitle" data-i18n="cta-subtitle">Deseja mais informações?</p>
+                <h2 class="cta-title" data-i18n="cta-title">Fale com a gente</h2>
+                <a href="https://wa.me/5561995122550" class="btn btn-primary cta-btn" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i> (61) 99512-2550
+                </a>
+            </div>
+            <div class="cta-images scroll-reveal-right delay-200">
+                <img src="assets/img/webp/02.webp" alt="Pão de queijo Dona Cuca - Peça o seu" class="img-left" loading="lazy">
+                <img src="assets/img/webp/10.webp" alt="Produtos Dona Cuca em destaque" class="img-right" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos Section -->
+    <section id="depoimentos" class="testimonials-section">
+        <div class="container">
+            <div class="section-header scroll-reveal">
+                <h3 class="testimonials-label" data-i18n="testimonials-label">Depoimentos</h3>
+                <h2 class="section-title testimonials-title" data-i18n="testimonials-title">O que dizem sobre nós</h2>
+            </div>
+        </div>
+
+        <div class="carousel-track-container scroll-reveal delay-200">
+            <div class="carousel-track">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-i18n="dep1-text">Pão de queijo delicioso! Sabor de queijo de
+                        verdade! Os recheados são indescritíveis também! Todo mundo que prova quer mais!!!</p>
+                    <span class="testimonial-author">André Oliveira</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-i18n="dep2-text">Pão de queijo de excelente qualidade, com
+                        ingredientes autênticos, ovo de verdade, queijo de verdade! Aprovado por mim e por toda a minha
+                        família! Recomendamos fortemente!</p>
+                    <span class="testimonial-author">Suzana Oliveira</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-i18n="dep3-text">O produto é de alta qualidade. Embalado
+                        adequadamente. A entrega é pontual. A comunicação com a responsável é totalmente eficaz. Adoro
+                        os produtos e levo sempre para amigos.</p>
+                    <span class="testimonial-author">Virgínia G. Balduino</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-i18n="dep4-text">O Pão de Queijo mais saboroso que eu, minhas
+                        filhas e amigos já comemos. Além de sabor tem qualidade e muito amor nos responsáveis por sua
+                        fabricação.</p>
+                    <span class="testimonial-author">Jaque Guerra Costa</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-i18n="dep5-text">Uma experiência maravilhosa! O Pão de queijo da
+                        Dona Cuca é um "Manjar dos Deuses"! Simples assim!</p>
+                    <span class="testimonial-author">Marta Maria Damásio Nonato</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-i18n="dep6-text">Excelente, pães de queijo deliciosos e ambiente
+                        super agradável e acolhedor. Nota 1000!!!!</p>
+                    <span class="testimonial-author">Fatima Ferraz Palhares</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-i18n="dep7-text">Pão de queijo de verdade!!! Simplesmente
+                        maravilhoso! Sabores sazonais sempre surpreendem!</p>
+                    <span class="testimonial-author">Gabriel Bengaloo</span>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
+                            class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="testimonial-text" data-i18n="dep8-text">Uma delícia!!!! Pão de queijo artesanal com
+                        ingredientes de qualidade.</p>
+                    <span class="testimonial-author">Jeanice Durão</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery and Story Section -->
+    <section id="historia" class="gallery-story-section">
+        <div class="container">
+            <div class="story-grid">
+                <!-- Top row: 3 images -->
+                <div class="story-grid-img img-1 scroll-reveal delay-100">
+                    <img src="assets/img/webp/04.webp" alt="Pão de queijo da Dona Cuca" loading="lazy">
+                </div>
+                <div class="story-grid-img img-2 scroll-reveal delay-200">
+                    <img src="assets/img/webp/12.webp" alt="Dona Cuca — sabor mineiro em Brasília" loading="lazy">
+                </div>
+                <div class="story-grid-img img-3 scroll-reveal delay-300">
+                    <img src="assets/img/webp/03.webp" alt="Produção artesanal Dona Cuca" loading="lazy">
+                </div>
+
+                <!-- Left column: 2 images stacked -->
+                <div class="story-grid-img img-4 scroll-reveal-left delay-400">
+                    <img src="assets/img/webp/13.webp" alt="Dona Cuca — ingredientes frescos e de qualidade" loading="lazy">
+                </div>
+                <div class="story-grid-img img-5 scroll-reveal-left delay-500">
+                    <img src="assets/img/webp/05.webp" alt="Pão de queijo recheado Dona Cuca" loading="lazy">
+                </div>
+
+                <!-- Center-Right: Story card spanning 2 cols and 2 rows -->
+                <div class="story-card scroll-reveal-right delay-200">
+                    <h3 class="story-label" data-i18n="story-label">A Dona Cuca</h3>
+                    <h2 class="story-heading" data-i18n="story-heading">Conheça a nossa história</h2>
+
+                    <div class="story-illustrations">
+                        <img src="assets/img/webp/banner.webp" alt="Ilustração Dona Cuca — história desde 1985" class="story-img" loading="lazy">
+                    </div>
+
+                    <p class="story-paragraph" data-i18n="story-text">Apesar de oficialmente criada em 2016, a Dona Cuca
+                        iniciou sua história e sua trajetória em 1985, ainda sem saber que mergulharia profundamente no
+                        universo gastronômico.</p>
+
+                    <div class="story-btn-wrapper">
+                        <a href="#historia" class="btn btn-danger" data-i18n="btn-details">Mais detalhes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Col 1 -->
+            <div class="footer-col scroll-reveal">
+                <h4 data-i18n="footer-col1">Ligue para nós</h4>
+                <p class="phone-number">(61) 99512-2550</p>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-location-dot"></i> <span data-i18n="footer-address">SIA Trecho 3 Lotes 625
+                            a 695 - Loja 01, Brasília - DF</span></li>
+                    <li><i class="fa-solid fa-envelope"></i> atendimento@donacuca.com.br</li>
+                </ul>
+            </div>
+
+            <!-- Col 2 -->
+            <div class="footer-col scroll-reveal delay-100">
+                <h4 data-i18n="footer-col2">Informações</h4>
+                <ul class="footer-links">
+                    <li><a href="#parceiro"><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                                data-i18n="footer-partner">Seja um parceiro</span></a></li>
+                    <li><a href="https://wa.me/5561995122550"><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                                data-i18n="footer-contact">Fale com a gente</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3 -->
+            <div class="footer-col scroll-reveal delay-200">
+                <h4 data-i18n="footer-col3">Acesso rápido</h4>
+                <ul class="footer-links">
+                    <li><a href="#produtos"><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                                data-i18n="footer-pao">Pão de queijo</span></a></li>
+                    <li><a href="#produtos"><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                                data-i18n="footer-biscoito">Biscoito de queijo</span></a></li>
+                    <li><a href="#produtos"><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                                data-i18n="footer-sabores">Sabores especiais</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4 -->
+            <div class="footer-col scroll-reveal delay-300">
+                <h4 data-i18n="footer-col4">Horários de atendimento</h4>
+                <ul class="hours-list">
+                    <li><i class="fa-solid fa-clock"></i> <span data-i18n="footer-hours1">Segunda - Sexta: 8h às
+                            18h</span></li>
+                    <li><i class="fa-solid fa-clock"></i> <span data-i18n="footer-hours2">Sábado: 8h às 12h</span></li>
+                    <li><i class="fa-solid fa-clock"></i> <span data-i18n="footer-hours3">Domingos e Feriados:
+                            Fechado</span></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/donacucapaodequeijo"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/donacucapaodequeijo"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/5561995122550"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5561995122550" class="floating-whatsapp" target="_blank"
+        aria-label="Fale conosco no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
 </body>
+
 </html>

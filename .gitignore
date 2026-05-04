@@ -1,0 +1,55 @@
+# ============================================
+#  DONA CUCA — .gitignore
+#  Arquivos que NÃO devem ir para hospedagem
+#  ou repositório público
+# ============================================
+
+# ─── Dependências Node.js ────────────────────
+node_modules/
+tools/node_modules/
+
+# ─── Ferramentas de desenvolvimento ──────────
+# (scripts internos, não fazem parte do site)
+tools/
+convert-images.js
+
+# ─── Imagens originais (backup local) ────────
+# As versões .webp já estão em assets/img/webp/
+assets/img/original/
+
+# ─── Arquivos de sistema do OS ───────────────
+.DS_Store          # macOS
+Thumbs.db          # Windows
+Desktop.ini        # Windows
+ehthumbs.db        # Windows
+
+# ─── Logs e temporários ──────────────────────
+*.log
+*.tmp
+*.temp
+.cache/
+
+# ─── Variáveis de ambiente (NUNCA subir) ─────
+# Se no futuro usar chaves de API, tokens, etc.
+.env
+.env.local
+.env.production
+*.env
+
+# ─── Editores e IDEs ─────────────────────────
+.vscode/settings.json
+.idea/
+*.suo
+*.user
+*.swp
+*.swo
+*~
+
+# ─── Build / dist ────────────────────────────
+dist/
+build/
+out/
+
+# ─── package-lock (opcional, mas recomendado) ─
+# Descomente a linha abaixo se não quiser versionar
+# tools/package-lock.json
