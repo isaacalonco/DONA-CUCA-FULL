@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página não encontrada | Dona Cuca</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #F89C1E;
+            --secondary: #DA2424;
+            --bg: #FBF9F6;
+            --dark: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            height: 80px;
+        }
+
+        .error-code {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(6rem, 20vw, 10rem);
+            font-weight: 700;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        p {
+            color: #666;
+            font-size: 1rem;
+            max-width: 420px;
+            line-height: 1.6;
+            margin-bottom: 36px;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 13px 26px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: #fff;
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+
+        .divider {
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius: 2px;
+            margin: 30px auto;
+        }
+
+        footer {
+            margin-top: 60px;
+            font-size: 0.85rem;
+            color: #999;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logo">
+        <img src="assets/logo/logo.png" alt="Dona Cuca">
+    </div>
+
+    <div class="error-code">404</div>
+
+    <h1>Ops! Essa página sumiu como pão de queijo recém-saído do forno.</h1>
+    <p>Parece que a página que você está procurando não existe ou foi movida. Mas não se preocupe — temos muito mais por
+        aqui!</p>
+
+    <div class="divider"></div>
+
+    <div class="btn-group">
+        <a href="index.html" class="btn btn-primary">
+            <i class="fa-solid fa-house"></i> Voltar ao início
+        </a>
+        <a href="https://wa.me/5561995122550" target="_blank" class="btn btn-outline">
+            <i class="fa-brands fa-whatsapp"></i> Fale conosco
+        </a>
+    </div>
+
+    <footer>
+        &copy; 2024 Dona Cuca — Pão de Queijo Artesanal
+    </footer>
+</body>
+
+</html>
