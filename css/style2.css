@@ -1,0 +1,184 @@
+/* ===== SEÇÃO PARCEIRO ===== */
+
+.parceiro-section {
+    padding: 50px 0;
+    background: var(--bg-light);
+}
+
+.parceiro-section .container h1 {
+    text-align: center;
+    padding-bottom: 30px;
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+/* ===== CARD PRINCIPAL ===== */
+
+.parceiro-wrapper {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 24px;
+    align-items: stretch;
+}
+
+/* ===== FORM ===== */
+
+.parceiro-form-side {
+    background: #fff;
+    border-radius: 20px;
+    padding: 34px 32px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.parceiro-form-side h2 {
+    font-size: 1.6rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.parceiro-form-side > p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 22px;
+}
+
+/* ===== INPUTS ===== */
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 18px;
+    border: 1px solid #e5e5e5;
+    border-radius: 50px;
+    font-family: var(--font-main);
+    font-size: 0.95rem;
+    background: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    border-radius: 24px;
+    min-height: 95px;
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+}
+
+/* ===== BOTÃO ===== */
+
+.btn-submit {
+    width: 100%;
+    background: var(--secondary-color);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 18px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background: var(--secondary-hover);
+    transform: translateY(-2px);
+}
+
+/* ===== SUCESSO ===== */
+
+.form-success {
+    display: none;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.form-success i {
+    font-size: 3rem;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+.form-success h3 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.form-success p {
+    color: var(--text-light);
+}
+
+/* ===== IMAGEM ===== */
+
+.parceiro-img-side {
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 100%;
+}
+
+.parceiro-img-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* remove overlay escuro */
+.parceiro-img-overlay {
+    display: none;
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 900px) {
+
+    .parceiro-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .parceiro-img-side {
+        height: 350px;
+        order: -1;
+    }
+
+    .parceiro-form-side {
+        padding: 35px 25px;
+    }
+
+    .parceiro-section .container h1 {
+        font-size: 1.8rem;
+    }
+
+    .parceiro-form-side h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    .parceiro-form-side h2 {
+        font-size: 1.5rem;
+    }
+
+    .parceiro-form-side > p {
+        font-size: 0.95rem;
+    }
+
+    .btn-submit {
+        padding: 16px;
+    }
+}

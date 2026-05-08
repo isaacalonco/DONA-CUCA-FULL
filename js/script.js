@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadTranslations(lang) {
         if (translationsCache[lang]) return translationsCache[lang];
         try {
-            const response = await fetch(`../locales/${lang}.json`);
+            const response = await fetch(`locales/${lang}.json`);
             if (!response.ok) throw new Error(`Could not load locales/${lang}.json`);
             const data = await response.json();
             translationsCache[lang] = data;
@@ -104,14 +104,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function applyTranslations(data) {
-        if (!data) return;
-        document.querySelectorAll('[data-i18n]').forEach(el => {
-            const key = el.getAttribute('data-i18n');
-            if (data[key] !== undefined) {
-                el.innerHTML = data[key];
-            }
-        });
-    }
+
+    if (!data) return;
+
+    /* textos normais */
+
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+
+        const key = el.getAttribute('data-i18n');
+
+        if (data[key] !== undefined) {
+            el.innerHTML = data[key];
+        }
+
+    });
+
+    /* placeholders */
+
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+
+        const key = el.getAttribute('data-i18n-placeholder');
+
+        if (data[key] !== undefined) {
+            el.placeholder = data[key];
+        }
+
+    });
+
+}
 
     async function setLanguage(lang, flag) {
         const data = await loadTranslations(lang);

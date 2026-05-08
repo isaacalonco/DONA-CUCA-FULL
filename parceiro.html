@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seja um Parceiro | Dona Cuca</title>
+    <meta name="description"
+        content="Quer revender o pão de queijo artesanal da Dona Cuca? Preencha o formulário e entraremos em contato com você.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.donacuca.com.br/parceiro.html">
+
+    <link rel="shortcut icon" href="assets/logo/logo.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="assets/logo/logo.png" alt="Dona Cuca">
+            </div>
+
+            <button class="mobile-menu-btn" aria-label="Abrir menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="index.html" data-i18n="nav-home">INÍCIO</a></li>
+                    <li><a href="#historia" data-i18n="nav-about">A DONA CUCA</a></li>
+                    <li class="dropdown">
+                        <a href="#produtos"><span data-i18n="nav-products">PRODUTOS</span> <i
+                                class="fa-solid fa-chevron-down text-xs"></i></a>
+                    </li>
+                    <li><a href="parceiro.html" data-i18n="nav-partner">SEJA UM PARCEIRO</a></li>
+                    <li><a href="#contato" data-i18n="nav-contact">FALE COM A GENTE</a></li>
+                    <li class="language-selector">
+                        <div class="lang-current">
+                            <img src="https://flagcdn.com/w20/br.png" alt="Português" id="current-flag">
+                            <span><span id="current-lang-text">PT</span> <i
+                                    class="fa-solid fa-chevron-down text-xs"></i></span>
+                        </div>
+                        <ul class="lang-dropdown">
+                            <li data-lang="pt" data-flag="br"><img src="https://flagcdn.com/w20/br.png" alt="Português">
+                                Português</li>
+                            <li data-lang="en" data-flag="us"><img src="https://flagcdn.com/w20/us.png" alt="English">
+                                English</li>
+                            <li data-lang="es" data-flag="es"><img src="https://flagcdn.com/w20/es.png" alt="Español">
+                                Español</li>
+                        </ul>
+                    </li>
+                </ul>
+                <a href="#pedir" class="btn btn-primary btn-header" data-i18n="btn-order">Peça agora</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ═══ SEÇÃO PRINCIPAL ═══ -->
+    <section class="parceiro-section">
+        <div class="container">
+            <h1 data-i18n="partner-heading">LEVE NOSSOS PRODUTOS PARA <br>O SEU ESTABELECIMENTO</h1>
+            <div class="parceiro-wrapper scroll-reveal">
+
+                <!-- Formulário -->
+                <div class="parceiro-form-side">
+                    <h2 data-i18n="partner-title">Entraremos em contato com você</h2>
+                    <p data-i18n="partner-text">Se você deseja oferecer nossos produtos aos seus clientes, entre em
+                        contato conosco. Teremos o
+                        maior prazer em atendê-lo.</p>
+
+                    <div id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="nome" data-i18n-placeholder="partner-name" placeholder="Nome"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="tel" id="telefone" data-i18n-placeholder="partner-phone"
+                                placeholder="Telefone com DDD" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" id="email" data-i18n-placeholder="partner-email" placeholder="E-mail"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="mensagem" data-i18n-placeholder="partner-message"
+                                placeholder="Mensagem"></textarea>
+                        </div>
+
+                        <button class="btn-submit" id="btnEnviar" data-i18n="partner-button">
+                            Enviar mensagem
+                        </button>
+                    </div>
+
+                    <!-- Estado de sucesso -->
+                    <div class="form-success" id="formSuccess">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h3 data-i18n="success-title">Mensagem enviada!</h3>
+                        <p data-i18n="success-text">
+                            Recebemos seu contato e retornaremos em breve.<br>
+                            Obrigado pelo interesse em ser parceiro Dona Cuca!
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Imagem -->
+                <div class="parceiro-img-side">
+                    <img src="assets/img/jpeg/business-hand-shake.jpg" alt="Parceria Dona Cuca">
+                    <div class="parceiro-img-overlay">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Col 1 -->
+            <div class="footer-col scroll-reveal">
+                <h4 data-i18n="footer-col1">Ligue para nós</h4>
+                <p class="phone-number">(61) 99512-2550</p>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-location-dot"></i> <span data-i18n="footer-address">SIA Trecho 3 Lotes 625
+                            a 695 - Loja 01, Brasília - DF</span></li>
+                    <li><i class="fa-solid fa-envelope"></i> atendimento@donacuca.com.br</li>
+                </ul>
+            </div>
+
+            <!-- Col 2 -->
+            <div class="footer-col scroll-reveal delay-100">
+                <h4 data-i18n="footer-col2">Informações</h4>
+                <ul class="footer-links">
+                    <li><a href="parceiro.html"><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                                data-i18n="footer-partner">Seja um parceiro</span></a></li>
+                    <li><a href="https://wa.me/5561995122550"><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                                data-i18n="footer-contact">Fale com a gente</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3 -->
+            <div class="footer-col scroll-reveal delay-200">
+                <h4 data-i18n="footer-col3">Acesso rápido</h4>
+                <ul class="footer-links">
+                    <li><a href="#produtos"><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                                data-i18n="footer-pao">Pão de queijo</span></a></li>
+                    <li><a href="#produtos"><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                                data-i18n="footer-biscoito">Biscoito de queijo</span></a></li>
+                    <li><a href="#produtos"><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                                data-i18n="footer-sabores">Sabores especiais</span></a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4 -->
+            <div class="footer-col scroll-reveal delay-300">
+                <h4 data-i18n="footer-col4">Horários de atendimento</h4>
+                <ul class="hours-list">
+                    <li><i class="fa-solid fa-clock"></i> <span data-i18n="footer-hours1">Segunda - Sexta: 8h às
+                            18h</span></li>
+                    <li><i class="fa-solid fa-clock"></i> <span data-i18n="footer-hours2">Sábado: 8h às 12h</span></li>
+                    <li><i class="fa-solid fa-clock"></i> <span data-i18n="footer-hours3">Domingos e Feriados:
+                            Fechado</span></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/donacucapaodequeijo"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/donacucapaodequeijo"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://wa.me/5561995122550"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão flutuante WhatsApp -->
+    <a href="https://wa.me/5561995122550" class="floating-whatsapp" target="_blank"
+        aria-label="Fale conosco no WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+    <script src="js/script.js"></script>
+    <script src="js/parceiro.js"></script>
+</body>
+
+</html>
