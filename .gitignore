@@ -9,12 +9,10 @@ node_modules/
 tools/node_modules/
 
 # ─── Ferramentas de desenvolvimento ──────────
-# (scripts internos, não fazem parte do site)
 tools/
 convert-images.js
 
 # ─── Imagens originais (backup local) ────────
-# As versões .webp já estão em assets/img/webp/
 assets/img/original/
 
 # ─── Arquivos de sistema do OS ───────────────
@@ -29,8 +27,7 @@ ehthumbs.db        # Windows
 *.temp
 .cache/
 
-# ─── Variáveis de ambiente (NUNCA subir) ─────
-# Se no futuro usar chaves de API, tokens, etc.
+# ─── Variáveis de ambiente ─────
 .env
 .env.local
 .env.production
@@ -49,7 +46,3 @@ ehthumbs.db        # Windows
 dist/
 build/
 out/
-
-# ─── package-lock (opcional, mas recomendado) ─
-# Descomente a linha abaixo se não quiser versionar
-# tools/package-lock.json
