@@ -45,4 +45,3 @@ ehthumbs.db        # Windows
 # ─── Build / dist ────────────────────────────
 dist/
 build/
-out/
