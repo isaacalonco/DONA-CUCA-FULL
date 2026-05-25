@@ -1,249 +1,366 @@
-/* ===== PAGINA DE SOBRE"A DONA CUCA" ===== */
+/* ===== PÁGINA SOBRE "A DONA CUCA" — Redesign ===== */
 
-p{
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-}
-
-h1{
-font-family: "Montserrat", sans-serif;
-font-weight: 500;
-
-}
-
-/*conteúdo */
-
-.container-imagem {
+/* ===== Hero Banner ===== */
+.sobre-hero {
     position: relative;
-    width: 100%;
-    height: 20rem;
-}
-
-.container-imagem img {
-    width: 100%;
-    height: 20rem;
-    object-fit: cover;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Cor preta com 50% de opacidade (o 0.5 controla a intensidade) */
-    background-color: rgba(0, 0, 0, 0.5); 
-}
-
-.texto-sobreposto {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-}
-
-/*conteudo dos paragrafos*/
-
-.sobrep1{
-   margin-left: auto;
-  margin-right: auto;
-  width: 30em;
-  padding: 30px;
-  text-align: center;
-  font-size: large;
-
-}
-
-.sobrep2{
-   margin-left: auto;
-  margin-right: auto;
-  width: 50em;
-  text-align: center;
-  padding: 30px;
-  font-size: large;
-}
-
-.chique{
-
-  font-family: "Playfair Display", serif;
-  font-optical-sizing: auto;
-  font-weight: 30em;
-  font-style: normal;
-  color: #E08915 ;
-}
-
-/*card*/
-
-.products {
-  padding: 80px 0;
-  background-color: var(--bg-light);
-}
-
-.section-header {
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-.section-title {
-  font-size: 2rem;
-  color: var(--primary-color);
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.product-card {
-  background: #fff;
-  text-align: center;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
-  display: flex;
-  flex-direction: column;
-}
-
-.product-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
-}
-
-.card-img-wrapper {
-  height: 250px;
-  overflow: hidden;
-}
-
-.card-img-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.product-card:hover .card-img-wrapper img {
-  transform: scale(1.1);
-}
-
-.card-content {
-  padding: 30px 20px;
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.card-content h3 {
-  font-size: 1.2rem;
-  margin-bottom: 15px;
-  color: var(--text-dark);
-}
-
-.card-content p {
-  font-size: 0.9rem;
-  color: var(--text-light);
-  margin-bottom: 25px;
-  flex-grow: 1;
-}
-
-.card-content .btn {
-  background-color: var(--secondary-color);
-  color: white;
-  border: none;
-  width: 100%;
-}
-
-.card-content .btn:hover {
-  background-color: var(--secondary-hover);
-}
-
-/*la pro final, whatszap*/
-.imagem-conosco {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.imagem-conosco img {
-    width: 100%;
-    height: 20rem;
-    object-fit: cover;
-}
-
-.overlay-conosco {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    /* Cor preta com 50% de opacidade (o 0.5 controla a intensidade) */
-    background-color: rgba(0, 0, 0, 0.5); 
-}
-
-.texto-sobreposto-conosco {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    transform: translate(-50%, -50%);
-    color: white;
+    color: #fff;
+    overflow: hidden;
 }
 
-.botao-numero{
-    display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 12px 40px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  cursor: pointer;
-  border: none;
-  text-transform: uppercase;
-  background-color: var(--primary-color);
-  color: #fff;
-
+.sobre-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 8s ease;
+    z-index: 0;
 }
 
-.botao-numero:hover {
-  transform: translateY(-3px) scale(1.02);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.sobre-hero:hover .sobre-hero-bg {
+    transform: scale(1.05);
 }
 
-.botao-numero:active {
-  transform: translateY(0) scale(0.98);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+.sobre-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(75, 46, 29, 0.75) 0%,
+        rgba(51, 51, 51, 0.65) 100%
+    );
+    z-index: 1;
 }
 
-.botao-numero-primary:hover {
-  background-color: var(--primary-hover);
-  color: #fff;
+.sobre-hero-content {
+    position: relative;
+    z-index: 10;
+    padding: 80px 20px;
 }
 
-.botao-numero-danger {
-  background-color: var(--secondary-color);
-  color: #fff;
+.sobre-hero-content h1 {
+    font-family: var(--font-main);
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
-.botao-numero:hover {
-  background-color: var(--secondary-hover);
-  color: #fff;
+.sobre-hero-sub {
+    font-family: var(--font-title);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    font-weight: 400;
 }
 
-.botao-numero-outline-danger {
-  background-color: transparent;
-  color: var(--secondary-color);
-  border: 2px solid var(--secondary-color);
+/* ===== Sobre a Empresa Section ===== */
+.sobre-empresa-section {
+    padding: 80px 0;
+    background-color: var(--bg-light);
 }
 
-.botao-numero-outline-danger:hover {
-  background-color: var(--secondary-color);
-  color: #fff;
+.sobre-empresa-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
 }
 
+.sobre-empresa-text {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sobre-label {
+    font-family: var(--font-title);
+    font-style: italic;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.sobre-heading {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.sobre-empresa-text p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+.sobre-founder {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 10px;
+    padding-top: 16px;
+    border-top: 2px solid var(--primary-color);
+    width: fit-content;
+}
+
+.founder-name {
+    font-family: var(--font-title);
+    font-style: italic;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+.founder-role {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.sobre-empresa-img {
+    position: relative;
+    /* Removed overflow: hidden so the ::after pseudo-element can be seen */
+    z-index: 1;
+}
+
+.sobre-empresa-img::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -20px;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary-color);
+    border-radius: 40% 60% 60% 40% / 50% 50% 40% 60%;
+    z-index: -1;
+    opacity: 0.2;
+    transition: all 1s ease;
+}
+
+.sobre-empresa-img img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    display: block;
+    /* Organic "Dough/Cheese bread" shape */
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transition: border-radius 1s ease, transform 0.6s ease;
+}
+
+.sobre-empresa-img:hover img {
+    transform: scale(1.03);
+    border-radius: 50% 50% 30% 70% / 50% 30% 70% 50%;
+}
+
+.sobre-empresa-img:hover::after {
+    border-radius: 30% 70% 50% 50% / 40% 40% 60% 60%;
+    transform: translate(-10px, -10px);
+}
+
+/* ===== Nossa História Section ===== */
+.sobre-historia-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.sobre-historia-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.sobre-historia-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.historia-text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.historia-text p {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    line-height: 1.9;
+    text-align: justify;
+}
+
+.historia-text p:first-child::first-letter {
+    font-family: var(--font-title);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    float: left;
+    line-height: 1;
+    margin-right: 8px;
+    margin-top: 4px;
+}
+
+/* ===== CTA Section ===== */
+.sobre-cta-section {
+    position: relative;
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+}
+
+.sobre-cta-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: 0;
+}
+
+.sobre-cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(75, 46, 29, 0.8) 0%,
+        rgba(51, 51, 51, 0.7) 100%
+    );
+    z-index: 1;
+}
+
+.sobre-cta-content {
+    position: relative;
+    z-index: 10;
+    padding: 60px 20px;
+}
+
+.sobre-cta-subtitle {
+    font-family: var(--font-title);
+    font-style: italic;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.sobre-cta-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.sobre-cta-btn {
+    font-size: 1.1rem;
+    padding: 16px 36px;
+    gap: 10px;
+}
+
+/* ===== Responsividade ===== */
+
+@media (max-width: 1024px) {
+    .sobre-empresa-grid {
+        gap: 40px;
+    }
+
+    .sobre-historia-content {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sobre-hero-content h1 {
+        font-size: 2.2rem;
+        letter-spacing: 2px;
+    }
+
+    .sobre-hero-sub {
+        font-size: 1.1rem;
+    }
+
+    .sobre-empresa-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sobre-empresa-img {
+        order: -1;
+    }
+
+    .sobre-empresa-img::after {
+        display: none;
+    }
+
+    .sobre-empresa-img img {
+        height: 300px;
+    }
+
+    .sobre-historia-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .sobre-heading {
+        font-size: 1.8rem;
+    }
+
+    .sobre-cta-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .sobre-hero {
+        min-height: 300px;
+    }
+
+    .sobre-hero-content {
+        padding: 60px 16px;
+    }
+
+    .sobre-hero-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .sobre-empresa-section,
+    .sobre-historia-section {
+        padding: 50px 0;
+    }
+
+    .sobre-empresa-img img {
+        height: 250px;
+    }
+
+    .sobre-cta-section {
+        min-height: 280px;
+    }
+
+    .sobre-cta-title {
+        font-size: 1.6rem;
+    }
+}

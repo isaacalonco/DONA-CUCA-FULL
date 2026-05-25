@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadTranslations(lang) {
         if (translationsCache[lang]) return translationsCache[lang];
         try {
-            const response = await fetch(`locales/${lang}.json`);
+            const response = await fetch(`/locales/${lang}.json`);
             if (!response.ok) throw new Error(`Could not load locales/${lang}.json`);
             const data = await response.json();
             translationsCache[lang] = data;
@@ -129,6 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const data = await loadTranslations(lang);
         applyTranslations(data);
         currentLang = lang;
+        document.documentElement.lang = lang;
 
         const currentFlag = document.getElementById('current-flag');
         const currentLangText = document.getElementById('current-lang-text');
