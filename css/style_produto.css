@@ -1,0 +1,255 @@
+
+/* Estilização do menu dropdown*/
+.submenu {
+    display: none;
+    position: absolute;
+    /* Para flutuar sobre o conteúdo */
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+/* Mostra o submenu quando o mouse passar por cima */
+.menu-dropdown:hover .submenu {
+    display: block;
+}
+
+/* Estilização básica dos links */
+.submenu li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #ddd;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Banner */
+
+.banner{
+    position: relative;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+}
+
+.banner-bg{
+    position: absolute;
+    inset: 0;
+
+    background-image: url('../assets/img/jpeg/donacuca-083.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-bg1{
+    position: absolute;
+    inset: 0;
+
+    background-image: url('../assets/img/webp/06.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-bg2{
+    position: absolute;
+    inset: 0;
+
+    background-image: url('../assets/img/webp/09.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,.4);
+}
+
+.banner-content{
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.banner-content h1{
+    color: white;
+    font-size: 40px;
+    margin: 0;
+}
+
+.scroll-reveal{
+    opacity:1 !important;
+    transform:none !important;
+}
+
+/* Submenu de produtos */
+
+.submenu-produtos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 50px;
+    margin-bottom: 70px;
+}
+
+.submenu-circulo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.submenu-circulo:hover {
+     transform: scale(1.15);
+}
+
+.submenu-circulo img {
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    
+}
+
+/* Produtos */
+
+.produto-container {
+   max-width: 1100px;
+   margin: 0 auto;
+   margin: 50px auto; /* 50px de espaço em cima e embaixo */
+   padding: 0 20px;
+   margin-bottom: 70px;
+
+   }
+.produto-conteudo {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+    }
+.coluna-esquerda {
+    flex: 1.1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.coluna-esquerda img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px; /* Bordas arredondadas como no print */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.btn-tabela {
+    background-color: #DA2424;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px; 
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: fit-content;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.btn-tabela:hover {
+    background-color: #DA2424;
+}
+.coluna-direita {
+    flex: 1;
+    padding-top: 20px;
+}
+.coluna-direita h1 {
+    font-size: 30px;
+    color: #2b2b2b;
+    margin-top: 0;
+    margin-bottom: 25px;
+        }
+
+.coluna-direita p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.info-embalagem {
+    font-size: 12px;
+    color: #444;
+}
+.info-embalagem strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #2b2b2b;
+}
+
+.produto-conteudo {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.produto-conteudo.invertido {
+    flex-direction: row-reverse;
+}
+
+/*informações (Sabores Especiais)*/
+
+.alerta-gluten {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 600;
+    color: #c0392b;
+}
+
+.alerta-gluten::before {
+    content: "✓"; 
+    color: #27ae60;
+    font-weight: bold;
+    font-size: 16px;
+}
+.aviso-encomenda {
+    font-size: 14px !important;
+    font-weight: 600;
+    color: #d35400 !important; 
+    margin-top: -15px;
+    margin-bottom: 25px !important;
+    background-color: #fff5e6;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: inline-block; 
+}
