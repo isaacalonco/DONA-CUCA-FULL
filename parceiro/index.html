@@ -11,7 +11,7 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.donacuca.com.br/parceiro.html">
 
-    <link rel="shortcut icon" href="/assets/logo/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/logo/logo.png" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +23,9 @@
     <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style2.css">
+    <link rel="stylesheet" href="../css/style3.css">
 </head>
 
 <body>
@@ -33,7 +34,7 @@
     <header class="header">
         <div class="container header-container">
             <div class="logo">
-                <img src="/assets/logo/logo.png" alt="Dona Cuca">
+                <img src="../assets/logo/logo.png" alt="Dona Cuca">
             </div>
 
             <button class="mobile-menu-btn" aria-label="Abrir menu">
@@ -42,13 +43,19 @@
 
             <nav class="nav-menu">
                 <ul class="nav-list">
-                    <li><a href="/" data-i18n="nav-home">INÍCIO</a></li>
-                    <li><a href="/sobre/"" data-i18n="nav-about">A DONA CUCA</a></li>
-                    <li class="dropdown">
-                        <a href="#produtos"><span data-i18n="nav-products">PRODUTOS</span> <i
-                                class="fa-solid fa-chevron-down text-xs"></i></a>
+                    <li><a href="../index.html" data-i18n="nav-home">INÍCIO</a></li>
+                    <li><a href="../sobre/index.html" data-i18n="nav-about">A DONA CUCA</a></li>
+                    <li class="menu-dropdown">
+                        <a href="#produtos" class="linkprincipal" data-i18n="nav-products">PRODUTOS
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="../produto/index.html">Pães de Queijo</a></li>
+                            <li><a href="../produto/index1.html">Biscoitos de Queijo</a></li>
+                            <li><a href="../produto/index2.html">Sabores Especiais</a></li>
+                        </ul>
                     </li>
-                    <li><a href="/parceiro/"" data-i18n="nav-partner">SEJA UM PARCEIRO</a></li>
+                    <li><a href="../parceiro/index.html" data-i18n="nav-partner">SEJA UM PARCEIRO</a></li>
                     <li><a href="#contato" data-i18n="nav-contact">FALE COM A GENTE</a></li>
                     <li class="language-selector">
                         <div class="lang-current">
@@ -123,7 +130,7 @@
 
                 <!-- Imagem -->
                 <div class="parceiro-img-side">
-                    <img src="/assets/img/jpeg/business-hand-shake.jpg" alt="Parceria Dona Cuca">
+                    <img src="../assets/img/jpeg/business-hand-shake.jpg" alt="Parceria Dona Cuca">
                     <div class="parceiro-img-overlay">
                     </div>
                 </div>
@@ -150,9 +157,9 @@
             <div class="footer-col scroll-reveal delay-100">
                 <h4 data-i18n="footer-col2">Informações</h4>
                 <ul class="footer-links">
-                    <li><a href="/sobre/""><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                    <li><a href="../sobre/index.html"><i class="fa-solid fa-chevron-right text-xs"></i> <span
                                 data-i18n="footer-about">Sobre a Dona Cuca</span></a></li>
-                    <li><a href="/parceiro/""><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                    <li><a href="../parceiro/index.html"><i class="fa-solid fa-chevron-right text-xs"></i> <span
                                 data-i18n="footer-partner">Seja um parceiro</span></a></li>
                     <li><a href="https://wa.me/5561995122550"><i class="fa-solid fa-chevron-right text-xs"></i> <span
                                 data-i18n="footer-contact">Fale com a gente</span></a></li>
@@ -163,11 +170,11 @@
             <div class="footer-col scroll-reveal delay-200">
                 <h4 data-i18n="footer-col3">Acesso rápido</h4>
                 <ul class="footer-links">
-                    <li><a href="#produtos"><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                    <li><a href="../produto/index.html"><i class="fa-solid fa-chevron-right text-xs"></i> <span
                                 data-i18n="footer-pao">Pão de queijo</span></a></li>
-                    <li><a href="#produtos"><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                    <li><a href="../produto/index1.html"><i class="fa-solid fa-chevron-right text-xs"></i> <span
                                 data-i18n="footer-biscoito">Biscoito de queijo</span></a></li>
-                    <li><a href="#produtos "><i class="fa-solid fa-chevron-right text-xs"></i> <span
+                    <li><a href="../produto/index2.html"><i class="fa-solid fa-chevron-right text-xs"></i> <span
                                 data-i18n="footer-sabores">Sabores especiais</span></a></li>
                 </ul>
             </div>
@@ -191,13 +198,14 @@
         </div>
     </footer>
 
-    <!-- Botão flutuante WhatsApp -->
+    <!-- Floating WhatsApp Button -->
     <a href="https://wa.me/5561995122550" class="floating-whatsapp" target="_blank"
         aria-label="Fale conosco no WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
-    <script src="/js/script.js"></script>
-    <script src="/js/parceiro.js"></script>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/produtos.js"></script>
 </body>
 
 </html>
