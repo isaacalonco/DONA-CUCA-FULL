@@ -40,7 +40,7 @@
     line-height: 1.2;
 }
 
-.parceiro-form-side > p {
+.parceiro-form-side>p {
     color: var(--text-light);
     font-size: 1rem;
     line-height: 1.8;
@@ -137,7 +137,6 @@
     object-fit: cover;
 }
 
-/* remove overlay escuro */
 .parceiro-img-overlay {
     display: none;
 }
@@ -169,12 +168,15 @@
 }
 
 @media (max-width: 576px) {
+    .parceiro-form-side {
+        padding: 25px 15px;
+    }
 
     .parceiro-form-side h2 {
         font-size: 1.5rem;
     }
 
-    .parceiro-form-side > p {
+    .parceiro-form-side>p {
         font-size: 0.95rem;
     }
 

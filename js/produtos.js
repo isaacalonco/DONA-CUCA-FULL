@@ -1,5 +1,3 @@
-/*submenu dropdown*/
-
 document.addEventListener("DOMContentLoaded", function() {
     const linkDropdown = document.querySelector('.linkprincipal');
 
@@ -8,7 +6,6 @@ document.addEventListener("DOMContentLoaded", function() {
         
         const submenu = this.nextElementSibling;
         
-        // Alterna entre mostrar e esconder o submenu
         if (submenu.style.display === "block") {
             submenu.style.display = "none";
         } else {

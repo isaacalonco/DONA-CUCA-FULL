@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale Com a Gente | Dona Cuca</title>
+    <meta name="description" content="Entre em contato com a Dona Cuca. Dúvidas, sugestões ou suporte.">
+    <link rel="canonical" href="https://www.donacuca.com.br/contato/index.html">
+    <link rel="shortcut icon" href="../assets/logo/logo.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/layout-secundario.css">
+    <link rel="stylesheet" href="../css/sobre.css">
+</head>
+<body>
+    <app-header></app-header>
+
+    <section class="parceiro-section">
+        <div class="container">
+            <h1 data-i18n="contact-heading">FALE COM A GENTE</h1>
+            <div class="parceiro-wrapper scroll-reveal">
+                
+                <div class="parceiro-form-side">
+                    <h2 data-i18n="contact-title">Como podemos ajudar?</h2>
+                    <p data-i18n="contact-text">Mande uma mensagem para a nossa equipe. Teremos o maior prazer em atendê-lo.</p>
+
+                    <div id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="nome" data-i18n-placeholder="contact-name" placeholder="Seu Nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" data-i18n-placeholder="contact-email" placeholder="Seu E-mail" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="mensagem" data-i18n-placeholder="contact-message" placeholder="Sua Mensagem" required></textarea>
+                        </div>
+                        <button class="btn-submit" id="btnEnviar" data-i18n="contact-button">Enviar mensagem</button>
+                    </div>
+
+                    <div class="form-success" id="formSuccess">
+                        <i class="fa-solid fa-circle-check"></i>
+                        <h3 data-i18n="contact-success-title">Mensagem enviada!</h3>
+                        <p data-i18n="contact-success-text">Agradecemos o seu contato. Retornaremos em breve.</p>
+                    </div>
+                </div>
+
+                <div class="parceiro-img-side">
+                    <img src="../assets/img/webp/06.webp" alt="Fale com a Dona Cuca">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <app-footer></app-footer>
+
+    <script src="../js/popup.js"></script>
+    <script src="../js/contato.js"></script>
+    <script type="module" src="../js/script.js"></script>
+</body>
+</html>

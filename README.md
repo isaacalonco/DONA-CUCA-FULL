@@ -1,17 +1,21 @@
 # Dona Cuca - Pão de Queijo Artesanal
 
-Projeto de landing page para a **Dona Cuca**, uma empresa artesanal de pães de queijo e produtos mineiros, estabelecida desde 1985 em Brasília-DF. O site apresenta o catálogo de produtos, a história da empresa e um formulário para captação de novos parceiros comerciais.
+Bem-vindo ao site oficial da **Dona Cuca**!
+Somos uma empresa especializada em pães de queijo e delícias mineiras, trazendo o verdadeiro sabor artesanal para Brasília-DF desde 1985.
 
-## gitTecnologias Utilizadas
+## O que você encontra aqui
 
-- **HTML5 & CSS3:** Estrutura semântica e estilos modernos (responsividade completa via Flexbox/Grid).
-- **JavaScript (Vanilla):** Sistema próprio de Internacionalização (i18n), animações de scroll (`ScrollReveal`), carrossel interativo e navegação mobile.
-- **FontAwesome:** Ícones vetoriais.
-- **Google Fonts:** Tipografia elegante (Montserrat e Playfair Display).
-- **Vercel:** Configurado para deploy otimizado com rotas limpas (Clean URLs).
+- **Nossa História:** Conheça como a Dona Cuca começou e nossa tradição com ingredientes de verdade.
+- **Nossos Produtos:** Veja nosso catálogo completo de pães de queijo tradicionais, biscoitos e sabores especiais.
+- **Contato e Parcerias:** Fale com a gente direto pelo WhatsApp, seja para fazer uma encomenda ou para revender nossos produtos no seu comércio.
 
-## Sistema de Tradução (i18n)
+## Idiomas Disponíveis
 
-O site possui um sistema de tradução dinâmico. Os idiomas suportados são Português (`pt`), Inglês (`en`) e Espanhol (`es`).
-As traduções ficam armazenadas na pasta `/locales` e são carregadas via chamadas HTTP (Fetch API).
+Nosso site foi feito para receber clientes de vários lugares! Você pode alterar o idioma da página facilmente pelo menu principal para:
+- 🇧🇷 Português
+- 🇺🇸 Inglês
+- 🇪🇸 Espanhol
 
+---
+
+Feito com muito carinho para quem ama pão de queijo de verdade.

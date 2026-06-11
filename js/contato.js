@@ -1,47 +1,18 @@
 const form = document.getElementById('contactForm');
 const btnEnviar = document.getElementById('btnEnviar');
-
 const nomeInput = document.getElementById('nome');
-const telefoneInput = document.getElementById('telefone');
 const emailInput = document.getElementById('email');
 const mensagemInput = document.getElementById('mensagem');
 
-telefoneInput.addEventListener('input', (e) => {
-    let valor = e.target.value.replace(/\D/g, '').slice(0, 11);
-    if (valor.length > 10) {
-        valor = valor.replace(
-            /^(\d{2})(\d{5})(\d{4}).*/,
-            '($1) $2-$3'
-        );
-    } else if (valor.length > 6) {
-        valor = valor.replace(
-            /^(\d{2})(\d{4})(\d+).*/,
-            '($1) $2-$3'
-        );
-    } else if (valor.length > 2) {
-        valor = valor.replace(
-            /^(\d{2})(\d+)/,
-            '($1) $2'
-        );
-    } else if (valor.length > 0) {
-        valor = valor.replace(
-            /^(\d*)/,
-            '($1'
-        );
-    }
-    e.target.value = valor;
-});
-
 function validarFormulario() {
     const nome = nomeInput.value.trim();
-    const telefone = telefoneInput.value.trim();
     const email = emailInput.value.trim();
 
-    if (!nome || !telefone || !email) {
+    if (!nome || !email) {
         showPopup({
             tipo: 'erro',
             titulo: window.t ? window.t('popup-req-fields-title', 'Campos obrigatorios') : 'Campos obrigatorios',
-            mensagem: window.t ? window.t('popup-req-fields-msg-partner', 'Preencha os campos <strong>Nome</strong>, <strong>Telefone</strong> e <strong>E-mail</strong> para continuar.') : 'Preencha os campos <strong>Nome</strong>, <strong>Telefone</strong> e <strong>E-mail</strong> para continuar.',
+            mensagem: window.t ? window.t('popup-req-fields-msg-contact', 'Preencha os campos <strong>Nome</strong> e <strong>E-mail</strong> para continuar.') : 'Preencha os campos <strong>Nome</strong> e <strong>E-mail</strong> para continuar.',
             textoBotao: window.t ? window.t('popup-req-fields-button', 'Entendi') : 'Entendi',
             estiloBotao: 'dourado',
             mostrarSub: false
@@ -69,18 +40,16 @@ function enviarFormulario() {
     if (!validarFormulario()) return;
 
     const nome = nomeInput.value.trim();
-    const telefone = telefoneInput.value.trim();
     const email = emailInput.value.trim();
     const mensagem = mensagemInput.value.trim();
 
     const msgVazia = window.t ? window.t('whatsapp-message-empty', 'Nao informada') : 'Nao informada';
     const templateMsg = window.t
-        ? window.t('whatsapp-partner-template', 'Ola, Dona Cuca!\n\nGostaria de ser parceiro.\n\nNome: {nome}\nTelefone: {telefone}\nE-mail: {email}\n\nMensagem:\n{mensagem}')
-        : 'Ola, Dona Cuca!\n\nGostaria de ser parceiro.\n\nNome: {nome}\nTelefone: {telefone}\nE-mail: {email}\n\nMensagem:\n{mensagem}';
+        ? window.t('whatsapp-message-template', 'Ola, Dona Cuca!\n\nMeu nome e {nome}\nE-mail: {email}\n\nMensagem:\n{mensagem}')
+        : 'Ola, Dona Cuca!\n\nMeu nome e {nome}\nE-mail: {email}\n\nMensagem:\n{mensagem}';
 
     const texto = templateMsg
         .replace('{nome}', nome)
-        .replace('{telefone}', telefone)
         .replace('{email}', email)
         .replace('{mensagem}', mensagem || msgVazia);
 
@@ -89,12 +58,12 @@ function enviarFormulario() {
     btnEnviar.disabled = true;
 
     const popMsgTemplate = window.t
-        ? window.t('popup-partner-ready-msg', '<strong>{nome}</strong>, seus dados de parceria serão enviados pelo WhatsApp.<br>Clique no botão abaixo para finalizar.')
-        : '<strong>{nome}</strong>, seus dados de parceria serão enviados pelo WhatsApp.<br>Clique no botão abaixo para finalizar.';
+        ? window.t('popup-contact-ready-msg', '<strong>{nome}</strong>, sua mensagem sera enviada pelo WhatsApp.<br>Clique no botão abaixo para continuar.')
+        : '<strong>{nome}</strong>, sua mensagem sera enviada pelo WhatsApp.<br>Clique no botão abaixo para continuar.';
 
     showPopup({
-        tipo: 'parceiro',
-        titulo: window.t ? window.t('popup-partner-ready-title', 'Tudo pronto!') : 'Tudo pronto!',
+        tipo: 'contato',
+        titulo: window.t ? window.t('popup-contact-ready-title', 'Mensagem pronta!') : 'Mensagem pronta!',
         mensagem: popMsgTemplate.replace('{nome}', nome),
         textoBotao: window.t ? window.t('popup-send-whatsapp', 'Enviar pelo WhatsApp') : 'Enviar pelo WhatsApp',
         estiloBotao: 'whatsapp',
@@ -111,9 +80,9 @@ function enviarFormulario() {
 
 btnEnviar.addEventListener('click', enviarFormulario);
 
-document.querySelectorAll('#contactForm input').forEach((input) => {
+document.querySelectorAll('#contactForm input, #contactForm textarea').forEach((input) => {
     input.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
+        if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
             enviarFormulario();
         }
     });
